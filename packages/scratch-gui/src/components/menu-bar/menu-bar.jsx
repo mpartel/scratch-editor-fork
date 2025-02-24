@@ -698,6 +698,7 @@ class MenuBar extends React.Component {
                         ) : [])}
                     </div>
                     <Divider className={classNames(styles.divider)} />
+                    {/*
                     <div className={styles.fileGroup}>
                         <div
                             aria-label={this.props.intl.formatMessage(ariaMessages.tutorials)}
@@ -728,6 +729,7 @@ class MenuBar extends React.Component {
                             </span>
                         </div>
                     </div>
+                    */}
                 </div>
 
                 {/* show the proper UI in the account menu, given whether the user is

@@ -56,10 +56,10 @@ export default appTarget => {
         }
     }
 
-    if (process.env.NODE_ENV === 'production' && typeof window === 'object') {
-        // Warn before navigating away
-        window.onbeforeunload = () => true;
-    }
+    // if (process.env.NODE_ENV === 'production' && typeof window === 'object') {
+    // Warn before navigating away
+    window.onbeforeunload = () => true;
+    // }
 
     ReactDOM.render(
         // important: this is checking whether `simulateScratchDesktop` is truthy, not just defined!
@@ -74,12 +74,15 @@ export default appTarget => {
                 onTelemetryModalOptOut={handleTelemetryModalOptOut}
             /> :
             <WrappedGui
-                canEditTitle
-                backpackVisible
-                showComingSoon
+                // backpackVisible
+                currentLocale="et"
+                locale="et"
+                canChangeTheme={false}
+                canChangeLanguage={false}
+                showComingSoon={false}
                 backpackHost={backpackHost}
                 canSave={false}
-                onClickLogo={onClickLogo}
+                // onClickLogo={onClickLogo}
             />,
         appTarget);
 };
